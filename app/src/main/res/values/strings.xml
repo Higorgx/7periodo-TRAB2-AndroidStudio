@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">TRAB2</string>
+    <string name="logo">MeuApp</string>
+    <string name="seu_login">Seu login</string>
+    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="ok">Ok</string>
     <string name="login">Login</string>
     <string name="cadastro">Cadastro</string>
     <string name="listarUsuarios">Listar Usuarios</string>
