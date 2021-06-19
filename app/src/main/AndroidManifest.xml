@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TRAB2">
+        <activity android:name=".Activity_listarUsrLog"></activity>
+        <activity android:name=".Activity_listarUsr" />
+        <activity android:name=".Activity_menu" />
+        <activity android:name=".Activity_login" />
+        <activity android:name=".Activity_cadastro" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,25 +6,23 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class Activity_menu extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_menu);
     }
-
-    public void additionalClient(View view){
-        Intent it = new Intent ( this, Activity_cadastro.class);
+    public void listarUsuarios(View view){
+        Intent it = new Intent ( this, Activity_listarUsr.class);
 
         startActivity(it);
 
     }
-    public void clientLogin(View view){
-        Intent it = new Intent ( this, Activity_login.class);
+    public void listarUsuariosLog(View view){
+        Intent it = new Intent ( this, Activity_listarUsrLog.class);
 
         startActivity(it);
 
     }
-
 }
