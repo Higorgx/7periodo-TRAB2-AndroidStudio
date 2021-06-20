@@ -2,10 +2,12 @@ package com.example.trab2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btnEntrar;
@@ -27,9 +29,8 @@ public class MainActivity extends AppCompatActivity {
                 String login = loginTxt.getText().toString();
                 String senha = loginTxt.getText().toString();
                 if (aut.fazerLogin(login, senha)) {
-                    // fez login, vai pra outra view
-                } else {
-                    // problema no login
+                    Intent intent = new Intent(MainActivity.this, Activity_menu.class);
+                    startActivity(intent);
                 }
             }
         });

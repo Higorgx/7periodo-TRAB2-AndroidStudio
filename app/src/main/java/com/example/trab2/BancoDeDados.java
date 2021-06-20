@@ -43,7 +43,7 @@ public class BancoDeDados extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USUARIOS);
 
         String CREATE_CONTACTS_TABLE = "CREATE TABLE IF NOT EXISTS " + TABLE_USUARIOS + "("
-                + USUARIOS_ID + " INTEGER PRIMARY KEY," + USUARIOS_LOGIN + " TEXT UNIQUE,"
+                + USUARIOS_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + USUARIOS_LOGIN + " TEXT UNIQUE,"
                 + USUARIOS_SENHA + " TEXT" + ")";
         db.execSQL(CREATE_CONTACTS_TABLE);
 
@@ -61,12 +61,10 @@ public class BancoDeDados extends SQLiteOpenHelper {
     }
 
     public void addUsuarioDb(SQLiteDatabase db, Usuario usu) {
-        System.out.println("criando usu "+ usu.getLogin());
 
         ContentValues values = new ContentValues();
         values.put(USUARIOS_LOGIN, usu.getLogin());
         values.put(USUARIOS_SENHA, usu.getSenha());
-        // falta fazer algo caso ja exista etc
 
         db.insert(TABLE_USUARIOS, null, values);
     }

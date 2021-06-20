@@ -35,16 +35,14 @@ public class Autentica {
             return false;
         }
 
-        if (user.getSenha() != senha) {
+        if (user.getSenha().equals(senha)) {
             Toast.makeText(mContext, "Usuário ou senha incorretos",
                     Toast.LENGTH_LONG).show();
             return false;
         }
 
         userLogado = user;
-        System.out.println(user.toString());
 
-        // abrir activity
         return true;
     }
 
