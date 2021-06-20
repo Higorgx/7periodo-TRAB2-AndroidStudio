@@ -18,4 +18,16 @@ public class Activity_listarUsrLog extends AppCompatActivity {
 
     }
 
+    public void deletaUserLogado(View v){
+        String args[] = new String[1];
+        args[0] = Autentica.getUserLogado().login;
+
+        BancoDeDados banco = BancoDeDados.getInstance(v.getContext());
+
+        banco.delUsuarioLogado(args);
+
+        Intent intent = new Intent(v.getContext(), Activity_menu.class);
+        startActivity(intent);
+    }
+
 }

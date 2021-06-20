@@ -69,6 +69,12 @@ public class BancoDeDados extends SQLiteOpenHelper {
         db.insert(TABLE_USUARIOS, null, values);
     }
 
+    public void delUsuarioLogado(String login[]){
+        System.out.println("LOGIN DO USUARIO:  " + login);
+        SQLiteDatabase db = this.getReadableDatabase();
+        db.delete(TABLE_USUARIOS, "login = ?", login);
+    }
+
     public void addUsuario(Usuario usu) {
         addUsuarioDb(this.getWritableDatabase(), usu);
     }
