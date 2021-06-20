@@ -26,7 +26,7 @@ public class Activity_listarUsrLog extends AppCompatActivity {
 
         banco.delUsuarioLogado(args);
 
-        Intent intent = new Intent(v.getContext(), Activity_menu.class);
+        Intent intent = new Intent(v.getContext(), Menu.class);
         startActivity(intent);
     }
 
